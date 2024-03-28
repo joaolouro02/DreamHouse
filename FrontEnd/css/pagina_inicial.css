@@ -1,0 +1,100 @@
+#banner {
+    position: relative;
+    z-index: 1;
+}
+
+#banner img {
+
+    height: 500px;
+
+}
+
+#cabecalho a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+#banner #redes {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: 65%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+}
+
+#banner #redes1 {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: 65%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#banner #redes2 {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: 65%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+
+.autopromocao {
+    text-align: center;
+}
+
+video {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+}
+
+
+video::-webkit-media-controls-enclosure {
+    width: 30px;
+    height: 30px;
+}
+
+audio {
+    margin-top: 20px;
+}
+
+
+
+#myCarousel img {
+    width: 100%;
+    height: 800px;
+}
+
+
+
+
+
+.casas img {
+    width: 100%;
+    height: 100%;
+}
+
+.segunda-linha {
+    margin-top: 50px;
+}
+
+.casas img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.casas img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+span {
+    margin-left: 15px;
+}

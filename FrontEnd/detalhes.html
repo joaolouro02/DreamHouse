@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="css/cabecalho_footer.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/detalhes.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="cabecalho">
+
+            <div class="row">
+                <div class="col-xl-3 d-flex">
+                    <a href="pagina_inicial.html">
+                        <h1 class="mr-3">DreamHouse</h1>
+                    </a>
+                    <img src="imagens/Logo.png" class="align-self-center">
+                </div>
+            </div>
+
+
+            <nav>
+                <ul>
+                    <li><a href="contactos.html">Contacte-nos</a></li>
+                    <li><a href="about.html">A nossa Equipa</a></li>
+
+                </ul>
+
+
+
+                <div class="menu-icon">
+                    <img src="imagens/menu.png">
+                </div>
+
+            </nav>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xl-6" id="produto">
+                <img src="" id="imagem">
+            </div>
+            <div class="col-xl-6" id="detalhes">
+                <h2 id="titulo"></h2>
+                <p id="preco"></p>
+                <p id="descricao"></p>
+
+                <a id="comprarLink" href="#"><button type="button" class="btn btn-success">Comprar</button></a>
+
+
+                <h3>Contactar o Vendedor</h3>
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" placeholder="Digite o seu e-mail">
+
+                <label for="message">Mensagem:</label>
+                <textarea class="form-control" placeholder="Digite a sua mensagem"></textarea>
+
+                <button type="submit">Enviar</button>
+
+
+            </div>
+            <div class="col-xl-6" id="icons">
+                <img src="imagens/next.png" id="btn-proxima" class="d-none d-xl-block">
+
+                <div class="icons">
+                    <div class="icon1">
+                        <a href="#"><span class="d-none d-xl-block">Excluir</span><img src="imagens/excluir.png"
+                                class="d-none d-xl-block"></a>
+                    </div>
+                    <div class="icon2">
+                        <a href="#"><span class="d-none d-xl-block">Favorito</span><img src="imagens/favorito.png"
+                                class="d-none d-xl-block"></a>
+                    </div>
+                    <div class="icon3">
+                        <a href="#"><span class="d-none d-xl-block">Partilhar</span><img src="imagens/partilhar.png"
+                                class="d-none d-xl-block"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Arrays com as imagens correspondentes a cada casa
+            const imagensHearst = ["imagens/01.jpg", "imagens/1_1.jpg", "imagens/1_2.jpg", "imagens/1_3.jpg"];
+            const imagensPinnacle = ["imagens/02.jpg", "imagens/2_1.jpg", "imagens/2_2.jpg", "imagens/2_3.jpg"];
+            const imagensMiddleGap = ["imagens/03.jpg", "imagens/3_1.webp", "imagens/3_2.jpg", "imagens/3_3.webp"];
+            const imagensTheAntilia = ["imagens/04.jpg", "imagens/4_1.png", "imagens/4_2.jpg", "imagens/4_3.jpeg"];
+            const imagensVillaLeopolda = ["imagens/05.jpg", "imagens/5_1.jpg", "imagens/5_2.webp", "imagens/5_3.jpg"];
+            const imagensThePentHouse = ["imagens/06.jpg", "imagens/6_1.webp", "imagens/6_2.jpg", "imagens/6_3.jpg"];
+
+            // Array com os arrays de imagens correspondentes a cada casa
+            const imagens = [imagensHearst, imagensPinnacle, imagensMiddleGap, imagensTheAntilia, imagensVillaLeopolda, imagensThePentHouse];
+
+            // Recupera o índice da imagem selecionada na página inicial
+            const params = new URLSearchParams(window.location.search);
+            const imagemSelecionada = parseInt(params.get("imagem"));
+
+            // Exibe a imagem correspondente
+            const imagem = document.querySelector("#imagem");
+            imagem.src = imagens[imagemSelecionada][0];
+
+            const comprarLink = document.getElementById("comprarLink");
+            comprarLink.href = "comprar.html?imagemSelecionada=" + imagemSelecionada;
+
+            let imagemAtual = 0;
+
+
+            const btnProxima = document.querySelector("#btn-proxima");
+            btnProxima.addEventListener("click", function () {
+                imagemAtual++;
+
+                switch (imagemSelecionada) {
+
+                    case 0:
+                        if (imagemAtual === imagensHearst.length) {
+                            imagemAtual = 0;
+                        }
+                        imagem.src = imagensHearst[imagemAtual];
+                        break;
+                    case 1:
+                        if (imagemAtual === imagensPinnacle.length) {
+                            imagemAtual = 0;
+                        }
+                        imagem.src = imagensPinnacle[imagemAtual];
+                        break;
+                    case 2:
+                        if (imagemAtual === imagensMiddleGap.length) {
+                            imagemAtual = 0;
+                        }
+                        imagem.src = imagensMiddleGap[imagemAtual];
+                        break;
+                    case 3:
+                        if (imagemAtual === imagensTheAntilia.length) {
+                            imagemAtual = 0;
+                        }
+                        imagem.src = imagensTheAntilia[imagemAtual];
+                        break;
+                    case 4:
+                        if (imagemAtual === imagensVillaLeopolda.length) {
+                            imagemAtual = 0;
+                        }
+                        imagem.src = imagensVillaLeopolda[imagemAtual];
+                        break;
+                    case 5:
+                        if (imagemAtual === imagensThePentHouse.length) {
+                            imagemAtual = 0;
+                        }
+                        imagem.src = imagensThePentHouse[imagemAtual];
+                        break;
+
+
+                }
+
+            });
+
+
+            const casas = [
+                {
+                    titulo: "Mansão Hearst, Estados Unidos",
+                    preco: "1.000.000",
+                    descricao: "Casa Luxuosa com piscina e terraço",
+
+                },
+                {
+                    titulo: "Pinnacle, Estados Unidos",
+                    preco: "2.000.000",
+                    descricao: "Casa moderna com garagem para 2 veículos",
+
+                },
+                {
+                    titulo: "Middle Gap Road, Hong Kong",
+                    preco: "3.000.000",
+                    descricao: "Casa com jardim enorme e ginásio interior",
+
+                },
+                {
+                    titulo: "The Antilia, Índia",
+                    preco: "4.000.000",
+                    descricao: "Casa com 17 quartos e piscina",
+                },
+                {
+                    titulo: "Villa Leopolda, Riviera Francesa",
+                    preco: "5.000.000",
+                    descricao: "Casa de luxo situada em zona sossegada e muito verde",
+                },
+                {
+                    titulo: "The Penthouse, Inglaterra",
+                    preco: "6.000.000",
+                    descricao: "Casa na montanha ideal para quem gosta de desportos de Inverno",
+                }
+
+            ];
+
+
+            function exibirInformacoesCasa(index) {
+                const casa = casas[index];
+
+                const titulo = document.querySelector("#titulo");
+                const preco = document.querySelector("#preco");
+                const descricao = document.querySelector("#descricao");
+
+                titulo.textContent = casa.titulo;
+                preco.textContent = `Preço: ${casa.preco}`;
+                descricao.textContent = `Descrição: ${casa.descricao}`;
+            }
+            exibirInformacoesCasa(imagemSelecionada);
+
+
+        </script>
+
+
+
+
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-4" id="icon">
+                    <img src="imagens/map-icon.png">Castelo Branco
+                </div>
+                <div class="col-lg-4" id="icon">
+                    <img src="imagens/call-icon.png">999999999
+                </div>
+                <div class="col-lg-4" id="icon">
+                    <img src="imagens/mail-icon.png">DreamHouse@gmail.com
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6" id="links">
+                    <h1 class="text-center">Links</h1>
+                    <div class="d-flex flex-column align-items-center">
+                        <p>Home</p>
+                        <p>Comprar</p>
+                        <p>Consultar</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" id="links">
+
+
+                    <h1>Social Media</h1>
+
+
+                    <a href="https://www.facebook.com/"><img src="imagens/face.png"></a>
+
+                    <a href="https://www.instagram.com/"><img src="imagens/insta.png"></a>
+
+                    <a href="https://www.twitter.com/"><img src="imagens/twt.png"></a>
+
+                </div>
+
+            </div>
+        </footer>
+
+
+    </div>
+
+    <script src="javascript/navbar.js"></script>
+
+</body>
+
+</html>

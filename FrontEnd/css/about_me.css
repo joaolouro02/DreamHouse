@@ -1,0 +1,22 @@
+h1,
+p {
+
+    text-align: center;
+}
+
+img {
+    float: right;
+    margin-top: -60px;
+}
+
+#dadosPessoais img {
+    margin-top: 30px;
+    width: 100%;
+    height: 500px;
+}
+
+#icons img {
+    width: 100px;
+    height: 200px;
+
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/about_me.css">
+
+</head>
+
+<body>
+
+    <h1>About me</h1>
+
+    <p class="d-none d-xl-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos
+        consequuntur dicta libero?
+        Assumenda
+        cupiditate hic quod ipsam delectus rem.</p>
+
+
+
+    <a href="about.html"><img src="imagens/back.png"></a>
+
+    <div class="row" id="dadosPessoais">
+        <div class="col-lg-4 col-md-6">
+            <img id="selected-image">
+
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <h1>Dados Pessoais</h1>
+            <p>Data de Nascimento:<span id="data-nascimento"></span><br></p>
+            <p>Telemóvel:<span id="telemovel"></span><br></p>
+            <p>Email:<span id="email"></span><br></p>
+            <p>Morada:<span id="morada"></span></p>
+        </div>
+
+        <div class="col-lg-4 col-md-6" id="icons">
+            <h1>Hobbies</h1>
+            <div class="row" style="display: flex; justify-content: center;">
+
+                <img id="hobbie1" src="" alt="Hobbie 1">
+
+
+                <img id="hobbie2" src="" alt="Hobbie 2">
+
+
+                <img id="hobbie3" src="" alt="Hobbie 3">
+
+
+                <div class="row" style="display: flex; justify-content: center;">
+
+                    <img id="hobbie4" src="" alt="Hobbie 4">
+
+
+                    <img id="hobbie5" src="" alt="Hobbie 5">
+
+
+                    <img id="hobbie6" src="" alt="Hobbie 6">
+
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            const dadosPessoais = [
+                {
+                    dataNascimento: "01-01-1992",
+                    telemovel: "912919293",
+                    email: "diana.louro@gmail.com",
+                    morada: "rua azul"
+                },
+                {
+                    dataNascimento: "02-02-1990",
+                    telemovel: "913939495",
+                    email: "maria.s.silva@gmail.com",
+                    morada: "rua amarela"
+                },
+                {
+                    dataNascimento: "03-02-1982",
+                    telemovel: "913939495",
+                    email: "rui.s.silva@gmail.com",
+                    morada: "rua verde"
+                },
+                {
+                    dataNascimento: "04-02-1985",
+                    telemovel: "913939495",
+                    email: "mael.s.silva@gmail.com",
+                    morada: "rua cinzenta"
+                }
+            ];
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedImage = urlParams.get('img');
+            document.getElementById('selected-image').src = selectedImage;
+
+            function exibirInformacoesCasa(index = 0) {
+                const casa = dadosPessoais[index];
+                const dataNascimento = document.querySelector("#data-nascimento");
+                const telemovel = document.querySelector("#telemovel");
+                const email = document.querySelector("#email");
+                const morada = document.querySelector("#morada");
+
+                dataNascimento.textContent = casa.dataNascimento;
+                telemovel.textContent = casa.telemovel;
+                email.textContent = casa.email;
+                morada.textContent = casa.morada;
+            }
+
+            if (selectedImage === 'imagens/p1.jpg') {
+                exibirInformacoesCasa(0);
+            } else if (selectedImage === 'imagens/p2.jpg') {
+                exibirInformacoesCasa(1);
+            }
+            else if (selectedImage === 'imagens/p3.png') {
+                exibirInformacoesCasa(2);
+            }
+            else {
+                exibirInformacoesCasa(3);
+            }
+
+            const icons = [
+                {
+                    hobbie1: "imagens/music.png",
+                    hobbie2: "imagens/mac.png",
+                    hobbie3: "imagens/beach.png",
+                    hobbie4: "imagens/animais.png",
+                    hobbie5: "imagens/cinema.png",
+                    hobbie6: "imagens/travel.png"
+
+                },
+                {
+                    hobbie1: "imagens/camera.jpg",
+                    hobbie2: "imagens/coffe.jpg",
+                    hobbie3: "imagens/beach.png",
+                    hobbie4: "imagens/natureza.png",
+                    hobbie5: "imagens/pintar.png",
+                    hobbie6: "imagens/cinema.png"
+
+                },
+                {
+                    hobbie1: "imagens/camera.jpg",
+                    hobbie2: "imagens/futebol.png",
+                    hobbie3: "imagens/beach.png",
+                    hobbie4: "imagens/natureza.png",
+                    hobbie5: "imagens/bicicleta.png",
+                    hobbie6: "imagens/car.jpg"
+
+                },
+                {
+                    hobbie1: "imagens/music.png",
+                    hobbie2: "imagens/coffe.jpg",
+                    hobbie3: "imagens/futebol.png",
+                    hobbie4: "imagens/cinema.png",
+                    hobbie5: "imagens/bicicleta.png",
+                    hobbie6: "imagens/travel.png"
+                }
+            ];
+
+            function exibirIcons(index = 0) {
+                const hobbies = icons[index];
+                const hobbie1 = document.querySelector("#hobbie1");
+                const hobbie2 = document.querySelector("#hobbie2");
+                const hobbie3 = document.querySelector("#hobbie3");
+                const hobbie4 = document.querySelector("#hobbie4");
+                const hobbie5 = document.querySelector("#hobbie5");
+                const hobbie6 = document.querySelector("#hobbie6");
+
+                hobbie1.setAttribute('src', hobbies.hobbie1);
+                hobbie2.setAttribute('src', hobbies.hobbie2);
+                hobbie3.setAttribute('src', hobbies.hobbie3);
+                hobbie4.setAttribute('src', hobbies.hobbie4);
+                hobbie5.setAttribute('src', hobbies.hobbie5);
+                hobbie6.setAttribute('src', hobbies.hobbie6);
+
+            }
+            if (selectedImage === 'imagens/p1.jpg') {
+                exibirIcons(0);
+            } else if (selectedImage === 'imagens/p2.jpg') {
+                exibirIcons(1);
+            }
+            else if (selectedImage === 'imagens/p3.png') {
+                exibirIcons(2);
+            }
+            else {
+                exibirIcons(3);
+            }
+
+        </script>
+
+
+
+
+
+</body>
+
+</html>

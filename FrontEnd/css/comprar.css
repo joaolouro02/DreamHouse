@@ -1,0 +1,37 @@
+.container {
+    width: 100%;
+}
+
+#resumo {
+    text-align: center;
+}
+
+#resumo img {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.tab-content img {
+    width: 100px;
+    height: 100px;
+
+}
+
+#mbway {
+    width: 120px;
+    height: 120px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.form-group {
+    width: 95%;
+}
+
+#pais,
+#morada {
+    width: 97%;
+}

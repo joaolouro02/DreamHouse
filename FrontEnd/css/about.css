@@ -1,0 +1,52 @@
+#cabecalho img {
+    width: 100px;
+    height: 100px;
+
+}
+
+#imagens img {
+
+    width: 350px;
+    height: 350px;
+
+}
+
+span {
+    margin-top: 20px;
+}
+
+
+
+#imagens button {
+
+    margin-top: 10px;
+}
+
+.imagem-desenvolvedor {
+    width: 100%;
+    transition: transform 0.5s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.imagem-desenvolvedor:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#imagens h1 {
+    margin-left: 20px;
+    font-family: 'Delicious Handrawn', cursive;
+    color: rgb(50, 74, 228);
+}
+
+#grupo {
+
+    margin-top: 30px;
+}
+
+#cabecalho a {
+    text-decoration: none;
+}

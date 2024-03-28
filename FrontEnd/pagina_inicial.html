@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="css/cabecalho_footer.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/pagina_inicial.css">
+
+
+
+
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="cabecalho">
+
+            <div class="row">
+                <div class="col-xl-3 d-flex">
+                    <a href="#">
+                        <h1 class="mr-3">DreamHouse</h1>
+                    </a>
+                    <img src="imagens/Logo.png" class="align-self-center">
+                </div>
+            </div>
+
+
+            <nav>
+                <ul>
+                    <li><a href="#autopromocao">Início</a></li>
+                    <li><a href="#imoveis">Imóveis</a></li>
+                    <li><a href="contactos.html">Contacte-nos</a></li>
+                    <li><a href="about.html">A nossa Equipa</a></li>
+                    <a href="pagina_login.html"><button type="button" class="btn btn-success">Login</button></a>
+                </ul>
+
+
+
+                <div class="menu-icon">
+                    <img src="imagens/menu.png">
+                </div>
+
+            </nav>
+        </div>
+
+        <div class="col-xl-12" id="banner">
+            <img src="imagens/banner.png" class="w-100 d-none d-sm-block">
+            <a href="https://www.facebook.com/"><img src="imagens/face.png" class="d-none d-sm-block" id="redes"></a>
+            <a href="https://www.instagram.com/"><img src="imagens/insta.png" class="d-none d-sm-block" id="redes1"></a>
+            <a href="https://www.youtube.com/"><img src="imagens/youtube.png" class="d-none d-sm-block" id="redes2"></a>
+        </div>
+
+
+
+
+        <div class="autopromocao">
+            <section class="autopromocao" id="autopromocao">
+                <h2>Confira a qualidade do nosso serviço!</h2>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <video src="imagens/casa.mp4" controls></video>
+
+                    </div>
+                    <div class="col-xl-6">
+                        <video src="imagens/casa2.mp4" controls></video>
+                    </div>
+                    <div class="col-xl-3 offset-4">
+                        <audio src="imagens/audio.m4a" controls></audio>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="imagens/01.jpg">
+                    <div class="container active">
+                        <div class="carousel-caption">
+                            <h1>NEW!</h1>
+                            <p>Mansão com terraço e vista incrível, piscina olímpica</p>
+                            <p><a href="#" class="btn btn-primary btn-large">Compre a sua casa dos sonhos</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imagens/02.jpg">
+                    <div class="container ">
+                        <div class="carousel-caption">
+                            <h1>New!</h1>
+                            <p>Mansão moderna com garagem para 2 carros</p>
+                            <p><a href="#" class="btn btn-primary btn-large">Compre a sua casa dos sonhos</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imagens/03.jpg">
+                    <div class="container ">
+                        <div class="carousel-caption">
+                            <h1>New!</h1>
+                            <p>Mansão com jardim amplo e ginásio</p>
+                            <p><a href="#" class="btn btn-primary btn-large">Compre a sua casa dos sonhos</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+            crossorigin="anonymous"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function () {
+                $('.carousel').carousel({
+                    interval: 2000
+                });
+            })
+        </script>
+
+
+
+        <div class="casas">
+            <section class="imoveis" id="imoveis">
+                <br>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#tudo">Todas</a></li>
+                    <li><a data-toggle="tab" href="#EU">Estados Unidos</a></li>
+                    <li><a data-toggle="tab" href="#HK">Hong Kong</a></li>
+                    <li><a data-toggle="tab" href="#India">Indía</a></li>
+                    <li><a data-toggle="tab" href="#FR">França</a></li>
+                    <li><a data-toggle="tab" href="#ING">Inglaterra</a></li>
+
+                </ul>
+                <div class="tab-content">
+                    <div id="tudo" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">Mansão
+                                    Hearst, Estados Unidos</span>
+                                <a href="detalhes.html?imagem=0"><img src="imagens/01.jpg"></a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">The
+                                    Pinnacle, Estados Unidos</span>
+                                <a href="detalhes.html?imagem=1"><img src="imagens/02.jpg"></a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">Middle
+                                    Gap Road, Hong Kong</span>
+                                <a href="detalhes.html?imagem=2"><img src="imagens/03.jpg"></a>
+                            </div>
+                        </div>
+
+                        <div class="row segunda-linha">
+                            <div class="col-lg-4 col-md-6 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">The
+                                    Antilia, Índia</span>
+                                <a href="detalhes.html?imagem=3"> <img src="imagens/04.jpg"></a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">Villa
+                                    Leopolda, Riviera Francesa </span>
+                                <a href="detalhes.html?imagem=4"> <img src="imagens/05.jpg"></a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">The
+                                    Penthouse, Inglaterra</span>
+                                <a href="detalhes.html?imagem=5"> <img src="imagens/06.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="EU" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-xl-4 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">Mansão
+                                    Hearst, Estados Unidos</span>
+                                <a href="detalhes.html?imagem=0"><img src="imagens/01.jpg"></a>
+                            </div>
+                            <div class="col-xl-4 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">The
+                                    Pinnacle, Estados Unidos</span>
+                                <a href="detalhes.html?imagem=1"><img src="imagens/02.jpg"></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="HK" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-xl-4 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">Middle
+                                    Gap Road, Hong Kong</span>
+                                <a href="detalhes.html?imagem=1"><img src="imagens/03.jpg"></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div id="India" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-xl-4 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">The
+                                    Antilia, Índia</span>
+                                <a href="detalhes.html?imagem=0"><img src="imagens/04.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="FR" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-xl-4 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">Villa
+                                    Leopolda, Riviera Francesa </span>
+                                <a href="detalhes.html?imagem=0"><img src="imagens/05.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ING" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-xl-4 gy-5">
+                                <span
+                                    style="font-size: 24px; font-weight: bold; color: #555; text-align: center; margin-top: 20px; text-transform: uppercase;">The
+                                    Penthouse, Inglaterra</span>
+                                <a href="detalhes.html?imagem=0"><img src="imagens/06.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </section>
+        </div>
+
+
+
+        <footer>
+            <div class="row">
+                <section class="contactos" id="contactos">
+                    <div class="col-lg-4" id="icon">
+                        <img src="imagens/map-icon.png">Castelo Branco
+                    </div>
+                    <div class="col-lg-4" id="icon">
+                        <img src="imagens/call-icon.png">999999999
+                    </div>
+                    <div class="col-lg-4" id="icon">
+                        <img src="imagens/mail-icon.png">DreamHouse@gmail.com
+                    </div>
+                </section>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-lg-6" id="links">
+                    <h1 class="text-center">Links</h1>
+                    <div class="d-flex flex-column align-items-center">
+                        <p>Home</p>
+                        <p>Comprar</p>
+                        <p>Consultar</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" id="links">
+
+
+                    <h1>Social Media</h1>
+
+
+                    <a href="https://www.facebook.com/"><img src="../Trabalho1/imagens/face.png"></a>
+
+                    <a href="https://www.instagram.com/"><img src="../Trabalho1/imagens/insta.png"></a>
+
+                    <a href="https://www.twitter.com/"><img src="../Trabalho1/imagens/twt.png"></a>
+
+                </div>
+
+            </div>
+        </footer>
+
+
+    </div>
+
+    <script src="javascript/navbar.js"></script>
+
+
+
+
+
+</body>
+
+</html>

@@ -14,7 +14,8 @@ Imaginary agency website (HTML, CSS, JavaScript only)
     <img src="FrontEnd/screens/compra.png" alt="compra" width="400" style="margin-right: 10px;"/>
 </div>
 <div style="display: flex; flex-wrap: wrap;">
-    <img src="FrontEnd/screens/detalhes.png" alt="detalhes" width="400" style="margin-right: 10px;"/>
-    <img src="FrontEnd/screens/compra.png" alt="compra" width="400" style="margin-right: 10px;"/>
+    <img src="FrontEnd/screens/abouUs.png" alt="detalhes" width="400" style="margin-right: 10px;"/>
+    <img src="FrontEnd/screens/aboutMe.png" alt="compra" width="400" style="margin-right: 10px;"/>
+    <img src="FrontEnd/screens/contactos.png" alt="compra" width="400" style="margin-right: 10px;"/>
 </div>
 
